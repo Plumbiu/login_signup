@@ -31,7 +31,7 @@ app.post('/signup', async (req, res) => {
     email,
     // username
   }, JWT_SECRET_KEY, {
-    expiresIn: 60 * 24 * 30 // token 的有效期为 30 天
+    expiresIn: 60 * 60 * 24 * 30 // token 的有效期为 30 天
   })
   // 2.加密密码
   const crypetedPassword = encrypt(password)
